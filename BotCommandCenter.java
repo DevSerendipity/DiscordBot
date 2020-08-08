@@ -1,5 +1,6 @@
 package DiscordBot;
 
+import DiscordBot.events.Reactions;
 import DiscordBot.events.WelcomeEvent;
 
 import net.dv8tion.jda.api.AccountType;
@@ -16,9 +17,10 @@ public class BotCommandCenter {
 
     public static void main(String[] args) throws LoginException {
         
-        jda = new JDABuilder(AccountType.BOT).setToken("NzM3NjA0Njg0MTAxMDU4NjYw.Xx_x5A.XNOgS5gflbYtnY-NBqR4AgzPI-4").build();
+        jda = new JDABuilder(AccountType.BOT).setToken("NzM3NjA0Njg0MTAxMDU4NjYw.Xx_x5A.-jUrKdpVUTgn91MTIY6sJQjEWgU").build();
 
         jda.addEventListener(new WelcomeEvent());
+        jda.addEventListener(new Reactions());
 
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.WATCHING, "YOU"));
     }
