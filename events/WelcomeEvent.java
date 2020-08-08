@@ -14,9 +14,8 @@ public class WelcomeEvent extends ListenerAdapter {
         if (messageSent[0].equalsIgnoreCase( Bot.prefix + "welcome") && messageSent.length == 1) {
             event.getChannel().sendTyping().queue();
             event.getChannel().sendMessage("Welcome from me to!! :smile: ").queue();
-        }else if(messageSent[0].equalsIgnoreCase(Bot.prefix + "welcome") && !(messageSent[1].isEmpty()) && messageSent.length == 2){
+        } else if(messageSent[0].equalsIgnoreCase(Bot.prefix + "welcome") && !(messageSent[1].isEmpty()) && messageSent.length == 2){
             event.getChannel().sendMessage("Heyy Welcome! It's nice to have you here " + event.getMessage().getMentionedMembers().get(0).getAsMention()).queue();
-
         }
     }
 }
