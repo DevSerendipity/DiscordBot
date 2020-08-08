@@ -1,4 +1,4 @@
-package DiscordBot.filter;
+package DiscordBot.JDAPractice.jda.filter;
 
 import DiscordBot.BotCommandCenter;
 

@@ -1,4 +1,4 @@
-package DiscordBot.events;
+package DiscordBot.JDAPractice.jda.events;
 
 import bot.Bot;
 

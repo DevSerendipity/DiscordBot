@@ -1,8 +1,5 @@
-package DiscordBot.filter;
+package DiscordBot.JDAPractice.jda.filter;
 
-
-import bot.filters.FilterMessage;
-import bot.filters.FilterOnOff;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
