@@ -1,6 +1,6 @@
 package DiscordBot.JDAPractice.jda.events;
 
-import bot.Bot;
+import DiscordBot.JDAPractice.jda.BotCenter;
 
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -18,11 +18,11 @@ public class Reactions extends ListenerAdapter {
 
         String[] messageSent = event.getMessage().getContentRaw().split(" ");
 
-        if (messageSent[0].equalsIgnoreCase(Bot.prefix + "react")) {
+        if (messageSent[0].equalsIgnoreCase(BotCenter.prefix + "react")) {
             List<String> islam = event.getGuild().getEmotes().stream().map(e -> e.getName() + ":" + e.getId()).collect(Collectors.toList());
             event.getMessage().addReaction(islam.get(generateRandom(islam.size()))).queue();
             event.getMessage().addReaction(islam.get(generateRandom(islam.size()))).queue();
-        } else if (messageSent[0].equalsIgnoreCase(Bot.prefix + "reactions")) {
+        } else if (messageSent[0].equalsIgnoreCase(BotCenter.prefix + "reactions")) {
             List<String> islam = event.getGuild().getEmotes().stream().map(e -> e.getName() + ":" + e.getId()).collect(Collectors.toList());
             for (String s : islam) {
                 event.getMessage().addReaction(s).queue();

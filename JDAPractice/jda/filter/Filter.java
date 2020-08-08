@@ -5,7 +5,6 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
 
 public class Filter extends ListenerAdapter {
 
@@ -21,7 +20,7 @@ public class Filter extends ListenerAdapter {
                         e.getMessage().delete().queue();
                         badWord = true;
                         if (FilterMessage.allowed) { //Prints a message saying watch your language IF enabled by !filtermessage
-                            e.getChannel().sendMessage("Watching your mouth, swearing will not help " + Objects.requireNonNull(e.getMember()).getUser().getName() + " **Alright I am watching you** ").queue();
+                            e.getChannel().sendMessage("Watching your mouth, swearing will not help " + e.getMember().getUser().getName() + " **Alright I am watching you** ").queue();
                         }
                     }
                 }
