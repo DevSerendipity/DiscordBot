@@ -1,6 +1,7 @@
 package DiscordBot.JDAPractice.jda;
 
 import DiscordBot.JDAPractice.jda.command.Calculate;
+import DiscordBot.JDAPractice.jda.command.Clear;
 import DiscordBot.JDAPractice.jda.events.Reactions;
 import DiscordBot.JDAPractice.jda.events.WelcomeEvent;
 import DiscordBot.JDAPractice.jda.filter.Filter;
@@ -22,7 +23,7 @@ public class BotCenter {
 
     public static void main(String[] args) throws LoginException {
 
-        jda = new JDABuilder(AccountType.BOT).setToken("NzM3NjA0Njg0MTAxMDU4NjYw.Xx_x5A.H4nv4qzAlIPpz3o9sxMOSUw_WTQ").build();
+        jda = new JDABuilder(AccountType.BOT).setToken("NzM3NjA0Njg0MTAxMDU4NjYw.Xx_x5A.4OSjVaXMh77P3PsCHnR31qYqfmY").build();
 
         jda.addEventListener(new WelcomeEvent());
         jda.addEventListener(new Reactions());
@@ -32,6 +33,7 @@ public class BotCenter {
         jda.addEventListener(new FilterOnOff());
 
         jda.addEventListener(new Calculate());
+        jda.addEventListener(new Clear());
 
         jda.getPresence().setActivity(Activity.of(Activity.ActivityType.WATCHING, "YOU"));
     }
